@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TourMate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TourMate</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-header">
+                <h1>Book Your Dream Trip</h1>
+                <p>Fill in the details below to reserve your perfect South India experience</p>
+            </div>
+            <div class="booking-container">
+                <div class="booking-form-wrapper">
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Select Destination</h3>
+                            <div class="form-group">
+                                <label for="destination">Choose Your Destination *</label>
+                                <select id="destination" name="destination" required>
+                                    <option value="">-- Select Destination --</option>
+                                    <optgroup label="Tamil Nadu">
+                                        <option value="Ooty">Ooty - Queen of Hill Stations</option>
+                                        <option value="Kodaikanal">Kodaikanal - Princess of Hill Stations</option>
+                                        <option value="Mahabalipuram">Mahabalipuram - Ancient Shore Temple</option>
+                                        <option value="Madurai">Madurai - Meenakshi Temple</option>
+                                        <option value="Rameswaram">Rameswaram - Sacred Island</option>
+                                        <option value="Kanyakumari">Kanyakumari - Land's End</option>
+                                        <option value="Coimbatore">Coimbatore - Manchester of South India</option>
+                                        <option value="Thanjavur">Thanjavur - Great Living Chola Temples</option>
+                                        <option value="Pondicherry">Pondicherry - French Colony</option>
+                                        <option value="Kanchipuram">Kanchipuram - Temple City</option>
+                                        <option value="Yercaud">Yercaud - Jewel of the South</option>
+                                        <option value="Kumbakonam">Kumbakonam - Temple Town</option>
+                                    </optgroup>
+                                    <optgroup label="Kerala">
+                                        <option value="Munnar">Munnar - Tea Gardens Paradise</option>
+                                        <option value="Alleppey">Alleppey - Backwaters & Houseboats</option>
+                                        <option value="Kochi">Kochi - Queen of Arabian Sea</option>
+                                        <option value="Wayanad">Wayanad - Lush Green Forests</option>
+                                        <option value="Thekkady">Thekkady - Periyar Wildlife Sanctuary</option>
+                                        <option value="Kovalam">Kovalam - Beautiful Beaches</option>
+                                        <option value="Varkala">Varkala - Cliff Beach</option>
+                                        <option value="Kumarakom">Kumarakom - Bird Sanctuary</option>
+                                        <option value="Thiruvananthapuram">Thiruvananthapuram - Capital City</option>
+                                        <option value="Idukki">Idukki - Hill Station</option>
+                                    </optgroup>
+                                    <optgroup label="Karnataka">
+                                        <option value="Bangalore">Bangalore - Garden City</option>
+                                        <option value="Mysore">Mysore - City of Palaces</option>
+                                        <option value="Hampi">Hampi - Ancient Ruins</option>
+                                        <option value="Coorg">Coorg - Scotland of India</option>
+                                        <option value="Gokarna">Gokarna - Beach Paradise</option>
+                                        <option value="Chikmagalur">Chikmagalur - Coffee Land</option>
+                                        <option value="Udupi">Udupi - Temple Town</option>
+                                        <option value="Badami">Badami - Cave Temples</option>
+                                        <option value="Belur">Belur - Hoysala Architecture</option>
+                                        <option value="Halebidu">Halebidu - Ancient Temples</option>
+                                        <option value="Jog Falls">Jog Falls - Highest Waterfall</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-calendar-alt"></i> Travel Dates</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkIn">Check-in Date *</label>
+                                    <input type="date" id="checkIn" name="checkIn" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkOut">Check-out Date *</label>
+                                    <input type="date" id="checkOut" name="checkOut" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="adults">Adults *</label>
+                                    <select id="adults" name="adults" required>
+                                        <option value="1">1 Adult</option>
+                                        <option value="2" selected>2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                        <option value="5+">5+ Adults</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="children">Children</label>
+                                    <select id="children" name="children">
+                                        <option value="0">0 Children</option>
+                                        <option value="1">1 Child</option>
+                                        <option value="2">2 Children</option>
+                                        <option value="3">3 Children</option>
+                                        <option value="4+">4+ Children</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                            <div class="form-group">
+                                <label for="paymentMethod">Payment Method *</label>
+                                <select id="paymentMethod" name="paymentMethod" required>
+                                    <option value="">-- Select Payment Method --</option>
+                                    <option value="credit">Credit Card</option>
+                                    <option value="debit">Debit Card</option>
+                                    <option value="upi">UPI</option>
+                                    <option value="netbanking">Net Banking</option>
+                                    <option value="wallet">Digital Wallet</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or requirements..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="booking-summary">
+                            <h3>Booking Summary</h3>
+                            <div class="summary-item">
+                                <span>Destination:</span>
+                                <span id="summaryDestination">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Duration:</span>
+                                <span id="summaryDuration">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Guests:</span>
+                                <span id="summaryGuests">-</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total Amount:</span>
+                                <span id="summaryTotal">₹0</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-large">
+                            <i class="fas fa-check"></i> Confirm Booking
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TourMate</h3>
+                    <p>Your trusted travel companion for exploring the beauty of South India.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#destinations">Destinations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TourMate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="api-config.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Booking form handling
+        const bookingForm = document.getElementById('bookingForm');
+        const checkIn = document.getElementById('checkIn');
+        const checkOut = document.getElementById('checkOut');
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        checkIn.setAttribute('min', today);
+        checkOut.setAttribute('min', today);
+
+        // Update checkout minimum date when checkin changes
+        checkIn.addEventListener('change', function() {
+            checkOut.setAttribute('min', this.value);
+        });
+
+        // Update summary
+        function updateSummary() {
+            const destination = document.getElementById('destination').value;
+            const checkInDate = document.getElementById('checkIn').value;
+            const checkOutDate = document.getElementById('checkOut').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+
+            document.getElementById('summaryDestination').textContent = destination || '-';
+            
+            if (checkInDate && checkOutDate) {
+                const days = Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24));
+                document.getElementById('summaryDuration').textContent = days + ' days';
+            } else {
+                document.getElementById('summaryDuration').textContent = '-';
+            }
+
+            const guests = `${adults} Adult(s)${children > 0 ? ', ' + children + ' Child(ren)' : ''}`;
+            document.getElementById('summaryGuests').textContent = guests;
+
+            // Calculate total (simple pricing)
+            if (destination && checkInDate && checkOutDate) {
+                const days = Math.ceil((new Date(checkOutDate) - new Date(checkInDate)) / (1000 * 60 * 60 * 24));
+                const basePrice = 2000; // Base price per day per person
+                const total = days * basePrice * parseInt(adults) + (days * basePrice * 0.5 * parseInt(children || 0));
+                document.getElementById('summaryTotal').textContent = '₹' + total.toLocaleString('en-IN');
+            } else {
+                document.getElementById('summaryTotal').textContent = '₹0';
+            }
+        }
+
+        // Add event listeners for summary updates
+        ['destination', 'checkIn', 'checkOut', 'adults', 'children'].forEach(id => {
+            document.getElementById(id).addEventListener('change', updateSummary);
+        });
+
+        bookingForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const res = await fetch(`${API_BASE}/api/bookings`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+
+                if (!res.ok) {
+                    alert(result.error || 'Booking failed');
+                    return;
+                }
+                
+                alert('Booking confirmed! Thank you for choosing TourMate. We will send you a confirmation email shortly.');
+                this.reset();
+                updateSummary();
+            } catch (err) {
+                alert('Could not connect to server. Make sure the server is running (npm start).');
+            }
+        });
+    </script>
+</body>
+</html>
+

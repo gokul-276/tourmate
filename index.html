@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourMate - Explore South India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>TourMate</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the Beauty of South India</h1>
+            <p>Explore Tamil Nadu, Kerala, and Karnataka - Where tradition meets natural splendor</p>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for destinations, places, or experiences...">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- States Section -->
+    <section class="states-section">
+        <div class="container">
+            <h2 class="section-title">Explore by State</h2>
+            <div class="states-grid">
+                <div class="state-card" data-state="tamilnadu">
+                    <div class="state-image" style="background-image: url('https://blogs.revv.co.in/blogs/wp-content/uploads/2020/05/Thanjavur.jpg')"></div>
+                    <div class="state-content">
+                        <h3>Tamil Nadu</h3>
+                        <p>Land of Temples and Rich Culture</p>
+                        <span class="place-count">12 Destinations</span>
+                    </div>
+                </div>
+                <div class="state-card" data-state="kerala">
+                    <div class="state-image" style="background-image: url('https://www.tastefulspace.com/wp-content/uploads/2021/03/Places-to-visit-in-South-India_600-1280x720-1.jpg')"></div>
+                    <div class="state-content">
+                        <h3>Kerala</h3>
+                        <p>God's Own Country</p>
+                        <span class="place-count">10 Destinations</span>
+                    </div>
+                </div>
+                <div class="state-card" data-state="karnataka">
+                    <div class="state-image" style="background-image: url('https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20191003134442/Maharajahs-Palace-in-Mysore.jpg')"></div>
+                    <div class="state-content">
+                        <h3>Karnataka</h3>
+                        <p>One State, Many Worlds</p>
+                        <span class="place-count">11 Destinations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations-section">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Places</button>
+                <button class="filter-btn" data-filter="tamilnadu">Tamil Nadu</button>
+                <button class="filter-btn" data-filter="kerala">Kerala</button>
+                <button class="filter-btn" data-filter="karnataka">Karnataka</button>
+            </div>
+            <div class="destinations-grid" id="destinationsGrid">
+                <!-- Destinations will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose TourMate?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe & Secure</h3>
+                    <p>Your safety is our priority</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>We're here to help anytime</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Top Rated</h3>
+                    <p>Highly rated by travelers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TourMate</h3>
+                    <p>Your trusted travel companion for exploring the beauty of South India.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>States</h4>
+                    <ul>
+                        <li><a href="#" data-filter="tamilnadu">Tamil Nadu</a></li>
+                        <li><a href="#" data-filter="kerala">Kerala</a></li>
+                        <li><a href="#" data-filter="karnataka">Karnataka</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@tourmate.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> South India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TourMate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="api-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

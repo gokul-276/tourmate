@@ -1,0 +1,5 @@
+node_modules/
+tourmate.db
+tourmate.db-wal
+tourmate.db-shm
+.env
